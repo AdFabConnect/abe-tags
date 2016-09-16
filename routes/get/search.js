@@ -1,7 +1,9 @@
 'use strict';
 
+var path = require('path');
+
 var route = function route(req, res, next, abe) {
-    var files = abe.FileParser.getFiles(abe.fileUtils.concatPath(abe.config.root, abe.config.data.url), true)
+    var files = abe.FileParser.getFiles(path.join(abe.config.root, abe.config.data.url), true)
     var tags = []
 
 	if(typeof req.query.q !== 'undefined' && req.query.q !== null
