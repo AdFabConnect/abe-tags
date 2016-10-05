@@ -1,7 +1,7 @@
-# abe-tags
+# abe-seo
 
-> plugin Abe for users and role management
+> plugin Seo for alternate links
 
 ```shell
-abe add https://github.com/AdFabConnect/abe-tags.git
+abe add https://github.com/AdFabConnect/abe-seo.git
 ```
