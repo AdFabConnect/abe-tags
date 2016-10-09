@@ -3,13 +3,13 @@
 var path = require('path');
 
 var route = function route(req, res, next, abe) {
-    var files = abe.FileParser.getFiles(path.join(abe.config.root, abe.config.data.url), true)
+    var files = abe.cmsData.file.getFiles(path.join(abe.config.root, abe.config.data.url), true)
     var tags = []
 
 	if(typeof req.query.q !== 'undefined' && req.query.q !== null
 		&& req.query.q !== '' && req.query.q.length > 3) {
 		Array.prototype.forEach.call(files, (file) => {
-			var json = abe.FileParser.getJson(file.path)
+			var json = abe.cmsData.file.get(file.path)
 			if(typeof json.abe_tags !== 'undefined' && json.abe_tags !== null) {
 				Array.prototype.forEach.call(json.abe_tags, (tag) => {
 					if (tag.indexOf(req.query.q) > -1) {
