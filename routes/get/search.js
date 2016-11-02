@@ -3,8 +3,8 @@
 var path = require('path');
 
 var route = function route(req, res, next, abe) {
-    var files = abe.cmsData.file.getFiles(path.join(abe.config.root, abe.config.data.url), true)
-    var tags = []
+  var files = abe.coreUtils.file.getFilesSync(path.join(abe.config.root, abe.config.data.url), true)
+  var tags = []
 
 	if(typeof req.query.q !== 'undefined' && req.query.q !== null
 		&& req.query.q !== '' && req.query.q.length > 3) {
