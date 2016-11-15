@@ -8,7 +8,7 @@ var hooks = {
 
     return obj;
   },
-  afterEditorFormBlocks: function afterEditorFormBlocks(blocks, json, abe) {
+  afterEditorFormBlocks: function afterEditorFormBlocks(blocks, json, text, abe) {
     blocks['Tags'] = {
     	input_tags:[
 				{
