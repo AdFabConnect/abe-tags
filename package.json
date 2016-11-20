@@ -1,0 +1,25 @@
+{
+  "name": "abe-tags",
+  "version": "1.0.0",
+  "description": "Tag your Abe content",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdFabConnect/abe-tags.git"
+  },
+  "keywords": [
+    "abe",
+    "plugin",
+    "cms",
+    "tags"
+  ],
+  "author": "Nicolas Labbé",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdFabConnect/abe-tags/issues"
+  },
+  "homepage": "https://github.com/AdFabConnect/abe-tags#readme"
+}
