@@ -35,7 +35,7 @@ var hooks = {
     return blocks;
   },
   afterEditorInput: function afterEditorInput(htmlString, params, abe) {
-		if(typeof params.value !== 'undefined' && params.value !== null && params.value !== '' && params.key === 'abe_tags') {
+		if(params.key === 'abe_tags') {
 			htmlString =  '<div class="form-group">'
       htmlString += '  <label for="abe_tags">'
       htmlString += '    Search tags'
@@ -54,7 +54,7 @@ var hooks = {
 				htmlString += '  <div class="abe_tags_fake_item">' + val + '<span class="glyphicon glyphicon-remove" data-tags-remove="true"></span></div>';
 			})
 			htmlString += '  </div>';
-      htmlString += '</div>'
+      htmlString += '</div>';
 		}
 
 		return htmlString;

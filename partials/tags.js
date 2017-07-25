@@ -6,7 +6,7 @@ new autoComplete({
     selector: '#abe_tags_fake',
     source: function(term, response){
         try { xhr.abort(); } catch(e){}
-        xhr = $.getJSON('/plugin/abe-tags/search', { q: term }, function(data) {
+        xhr = $.getJSON('/abe/plugin/abe-tags/search', { q: term }, function(data) {
           response(data.result);
         });
     }
@@ -20,7 +20,6 @@ function setTags() {
     tags.push(tag.innerHTML.replace('<span class="glyphicon glyphicon-remove" data-tags-remove="true"></span>', ''))
   })
   abe.json.data.abe_tags = tags
-  abe.inputChanged()
 }
 
 function removeTags() {
